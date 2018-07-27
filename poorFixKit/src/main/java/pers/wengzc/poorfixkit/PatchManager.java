@@ -3,6 +3,7 @@ package pers.wengzc.poorfixkit;
 import android.os.Environment;
 
 import java.io.File;
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 import dalvik.system.PathClassLoader;
@@ -50,6 +51,12 @@ public class PatchManager {
                 return method.invoke(null, runParams.mParams);
             }else{
                 Object patchInstance = patchClass.newInstance();
+                try{
+                    Field orgObjectField = patchClass.getField("$$originalObject");
+                    orgObjectField.set(patchInstance, runParams.mOriginalObject);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
                 return method.invoke(patchInstance, runParams.mParams);
             }
         }catch (Exception e){

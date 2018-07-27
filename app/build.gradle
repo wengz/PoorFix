@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
-//apply plugin: 'pers.wengzc.poorFix'
+apply plugin: 'pers.wengzc.poorFix'
 
-apply plugin: 'pers.wengzc.poorFixPatchGenerate'
+//apply plugin: 'pers.wengzc.poorFixPatchGenerate'
 
 android {
     compileSdkVersion 27

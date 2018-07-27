@@ -10,6 +10,7 @@ import java.lang.reflect.Method;
 
 import pers.wengzc.poorfixkit.MethodIdentifier;
 import pers.wengzc.poorfixkit.PatchManager;
+import pers.wengzc.poorfixkit.RunParams;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,8 +65,16 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, helloString(), Toast.LENGTH_SHORT).show();
     }
 
-
     private static String helloString (){
         return "补丁前的静态返回";
     }
+
+    private String privateStrReturn (){
+        return "private String 返回";
+    }
+
+    public String publicStrReturn (){
+        return "public String 返回";
+    }
+
 }

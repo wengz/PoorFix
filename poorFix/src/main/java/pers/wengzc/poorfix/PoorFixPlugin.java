@@ -275,10 +275,12 @@ public class PoorFixPlugin extends Transform implements Plugin<Project>{
             }
         }
 
+        codeInsert.add( isStatic ? new InsnNode(Opcodes.ACONST_NULL): new VarInsnNode(Opcodes.ALOAD, 0));
+
         codeInsert.add(new MethodInsnNode(Opcodes.INVOKESPECIAL,
                 Type.getInternalName(RunParams.class),
                 "<init>",
-                "([Ljava/lang/Object;)V"));
+                "([Ljava/lang/Object;Ljava/lang/Object;)V"));
         codeInsert.add(nodeFor_fixedReturn());
         if (!isPrimaryType(returnType)){
             codeInsert.add(new TypeInsnNode(Opcodes.CHECKCAST, returnType.getInternalName()));

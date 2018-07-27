@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PoorFixTool.iml" filepath="$PROJECT_DIR$/PoorFixTool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PoorFix.iml" filepath="$PROJECT_DIR$/PoorFix.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/poorFix/poorFix.iml" filepath="$PROJECT_DIR$/poorFix/poorFix.iml" />
       <module fileurl="file://$PROJECT_DIR$/poorFixKit/poorFixKit.iml" filepath="$PROJECT_DIR$/poorFixKit/poorFixKit.iml" />
